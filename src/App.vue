@@ -1,28 +1,39 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TheHeader/>
+    <TheJumboTop/>
+    <TheCenterMain/>
+    <TheJumboCenter/>
+    <TheBottomMain/>
+    <TheJumboBottom/>
+    <TheFooter/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader.vue';
+import TheJumboTop from './components/TheJumboTop.vue';
+import TheCenterMain from './components/TheCenterMain.vue';
+import TheJumboCenter from './components/TheJumboCenter.vue';
+import TheBottomMain from './components/TheBottomMain.vue';
+import TheJumboBottom from './components/TheJumboBottom.vue';
+import TheFooter from './components/TheFooter.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    TheHeader,
+    TheJumboTop,
+    TheCenterMain,
+    TheJumboCenter,
+    TheBottomMain,
+    TheJumboBottom,
+    TheFooter
+}
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
