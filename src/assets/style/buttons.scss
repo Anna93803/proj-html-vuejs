@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.btn {
+    border: none;
+    padding: .625rem 1.25rem;
+    border-radius: 1rem;
+    font-size: .75rem;
+    color: $ColorLight;
+}
+
+.btn-secondary {
+    background-color: $ColorSecondary;
+}

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <div class="jumbo">
-            <!-- Jumbo con img -->
+        <!-- <div class="jumbo">
+            <!- Jumbo con img -->
             <!-- Text button -->
             <!-- Icons -->
-        </div>
+        <!-- </div> --> 
         <div class="jumbo-color">
             <!-- background full -->
             <!-- cards -->
