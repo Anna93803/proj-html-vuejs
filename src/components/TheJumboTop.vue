@@ -225,10 +225,6 @@ export default {
             bottom: 3.125rem;
             height: 380px;
 
-            img {
-                width: 100%;
-            }
-
             .title-cards {
                 position: absolute;
                 color: $ColorLight;
@@ -269,7 +265,6 @@ export default {
 
                 img {
                     border-radius: 50%;
-                    width: 100%;
                 }
             }
 

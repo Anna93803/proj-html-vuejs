@@ -28,6 +28,50 @@
                 <button class="btn btn-red"><a href="#"><i class="fa-brands fa-youtube"></i> Visit my YuoTube channel</a></button>
             </div>
         </div>
+        <div class="container">
+            <div class="playlist">
+                <h5>Feautered playlist</h5>
+                <h6>View all videos ></h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="box-video">
+                        <div class="box-img">
+                            <img src="/img/video2-2x.jpg" alt="">
+                            <div class="circle">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="text-video">
+                            <h5>Thighs & glute workout</h5>
+                            <small>Increase your mobility</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box-video">
+                        <div class="box-img">
+                            <img src="/img/video2-2x.jpg" alt="">
+                        </div>
+                        <div class="text-video">
+                            <h5>Thighs & glute workout</h5>
+                            <small>Increase your mobility</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="box-video">
+                        <div class="box-img">
+                            <img src="/img/video2-2x.jpg" alt="">
+                        </div>
+                        <div class="text-video">
+                            <h5>Thighs & glute workout</h5>
+                            <small>Increase your mobility</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -42,6 +86,7 @@ export default {
 @import '../assets/style/buttons.scss';
 
 .center-main {
+    padding-bottom: 6.25rem;
     .row {
         display: flex;
         align-items: center;
@@ -53,10 +98,6 @@ export default {
             border-bottom-right-radius: 2.1875rem;
             overflow: hidden;
     
-            img {
-                width: 100%;
-            }
-
             .circle {
                 background-color: $ColorLight;
                 height: 80px;
@@ -134,6 +175,65 @@ export default {
     
             a {
                 color: $ColorLight;
+            }
+        }
+    }
+
+    .container {
+        padding-top: 3.125rem;
+
+        .playlist {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+
+            h5 {
+                padding-bottom: 1.875rem;
+                font-size: 1.25rem;
+            }
+        }
+
+        .row {
+            gap: 30px;
+
+            .box-img {
+                border-bottom-right-radius: 2.1875rem;
+                overflow: hidden;
+                position: relative;
+
+                .circle {
+                    background-color: $ColorLight;
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .fa-play {
+                        color: $ColorSecondary;
+                        position: absolute;
+                        font-size: .9375rem;
+                        left: 1.25rem;
+                        bottom: 1.25rem;
+                    }
+                }
+
+            }
+            .text-video {
+                text-align: center;
+                padding-top: .9375rem;
+
+                h5 {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    padding-bottom: .3125rem;
+                }
+
+                small {
+                    color: $ColorSecondary;
+                }
             }
         }
     }

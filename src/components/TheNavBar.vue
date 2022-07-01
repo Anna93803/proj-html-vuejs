@@ -75,10 +75,6 @@ export default {
         .col {
             .logo {
                 width: 12.5rem;
-
-                img {
-                    width: 100%;
-                }
             }
 
             ul {
