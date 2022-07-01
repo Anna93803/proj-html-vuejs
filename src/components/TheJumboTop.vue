@@ -11,7 +11,7 @@
                             <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet.</p>
                             <div class="buttons">
                                 <button class="btn btn-secondary">
-                                    <a href="#"><i class="fa-brands fa-youtube"></i> Visitcmy YuoTube channel</a>
+                                    <a href="#"><i class="fa-brands fa-youtube"></i> Visit my YuoTube channel</a>
                                 </button>
                                 <button class="btn btn-dark">
                                     <a href="#">Buy Avada Today <i class="fa-solid fa-arrow-right"></i></a>
@@ -114,11 +114,9 @@ export default {
         align-items: center;
         justify-content: space-between;
         color: $ColorLight;
-        padding-top: 145px;
-
+        padding-top: 9.0625rem;
 
         .col {
-
             .certified {
                 
 
@@ -151,22 +149,20 @@ export default {
             }
 
         }
-
         .col {
             .circle {
                 background-color: $ColorLight;
                 height: 80px;
                 width: 80px;
                 border-radius: 50%;
-                // left: 33%;
                 position: relative;
 
                 .fa-play {
                     color: $ColorSecondary;
                     position: absolute;
-                    left: 33px;
-                    bottom: 31px;
-                    font-size: 20px;
+                    left: 2.0625rem;
+                    bottom: 1.9375rem;
+                    font-size: 1.25rem;
                 }
             }
 
@@ -215,7 +211,7 @@ export default {
 
 .bg-color {
     background: linear-gradient(139deg, rgba(47,18,184,1) 0%, rgba(126,9,100,1) 48%, rgba(197,1,25,1) 84%); 
-    padding-bottom: 3.75rem;
+    padding-bottom: 7.75rem;
 
     .row {
         display: flex;
@@ -261,7 +257,7 @@ export default {
             font-size: 2.5rem;
             word-break: break-all;
             width: 68%;
-            padding: 50px 0;
+            padding: 3.125rem 0;
         }
         .user-testimonial {
             display: flex;
