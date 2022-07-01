@@ -215,6 +215,7 @@ export default {
 
 .bg-color {
     background: linear-gradient(139deg, rgba(47,18,184,1) 0%, rgba(126,9,100,1) 48%, rgba(197,1,25,1) 84%); 
+    padding-bottom: 3.75rem;
 
     .row {
         display: flex;
@@ -226,6 +227,7 @@ export default {
             overflow: hidden;
             position: relative;
             bottom: 3.125rem;
+            height: 380px;
 
             img {
                 width: 100%;
@@ -239,7 +241,7 @@ export default {
 
                 p {
                     font-weight: 700;
-                    font-size: 1.25rem;
+                    font-size: 1.50rem;
                 }
 
                 p:last-child {
@@ -266,9 +268,15 @@ export default {
             align-items: center;
             gap: .9375rem;
 
-            img {
-                border-radius: 50%;
+            .image {
+                width: 50px;
+
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                }
             }
+
 
             span:last-child {
                 color: $ColorText;
