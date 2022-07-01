@@ -4,14 +4,14 @@
             <div class="row">
                 <div class="col">
                     <div class="logo">
-                        <img src="public/img/logo.png" alt="logo">
+                        <img src="/img/logo.png" alt="logo">
                     </div>
                 </div>
                 <div class="col">
                     <ul>
                         <li v-for="(link, i) in navLinks" :key="i"><a :href=" link.href ">{{ link.name }}</a></li>
                         <li>
-                            <a href="#" class="bg-link">New</a>
+                            <a href="#" class="bg-link">new</a>
                         </li>
                         <li><button class="btn btn-secondary">Shedule a Workout</button></li>
                         <li><i class="fa-solid fa-cart-shopping"></i></li>
@@ -20,16 +20,12 @@
                 </div>
             </div>
         </div>
-        <!-- Logo AVADA FITNESS -->
-        <!-- Link -->
-        <!-- Button -->
-        <!-- Icons -->
     </div>
 </template>
 
 <script>
 export default {
-    name: 'TheHeader',
+    name: 'TheNavBar',
     data() {
         return {
             navLinks: [
@@ -69,8 +65,7 @@ export default {
 
 .bg-navbar {
     background-color: $ColorPrimary;
-    // debbug
-    padding: 20px 0;
+    padding: 1.25rem 0;
 
     .row {
         display: flex;
@@ -78,13 +73,25 @@ export default {
         align-items: center;
 
         .col {
+            .logo {
+                width: 12.5rem;
+
+                img {
+                    width: 100%;
+                }
+            }
 
             ul {
                 display: flex;
+                align-items: center;
 
                 li,
                 a {
                     color: $ColorText;
+
+                    &:hover {
+                        color: $ColorLight;
+                    }
                 }
 
                 li {
@@ -94,13 +101,17 @@ export default {
                 li:last-child {
                     padding-right: 0;
                 }
-
                 .bg-link {
                     background-color: $ColorGold;
                     color: $ColorPrimary;
                     padding: .125rem .25rem;
                     border-radius: .125rem;
                     font-size: .8125rem;
+
+                    &:hover {
+                        color: $ColorPrimary;
+                        font-weight: 700;
+                    }
                 }
             }
         }

@@ -1,10 +1,9 @@
 <template>
     <div>
-        <!-- <div class="jumbo">
-            <!- Jumbo con img -->
-            <!-- Text button -->
-            <!-- Icons -->
-        <!-- </div> --> 
+         <!-- Logo AVADA FITNESS -->
+        <!-- Link -->
+        <!-- Button -->
+        <!-- Icons -->
         <div class="jumbo-color">
             <!-- background full -->
             <!-- cards -->

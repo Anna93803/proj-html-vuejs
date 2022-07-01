@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TheHeader/>
+    <TheNavBar/>
     <TheJumboTop/>
     <TheCenterMain/>
     <TheJumboCenter/>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import TheHeader from './components/TheHeader.vue';
+import TheNavBar from './components/TheNavBar.vue';
 import TheJumboTop from './components/TheJumboTop.vue';
 import TheCenterMain from './components/TheCenterMain.vue';
 import TheJumboCenter from './components/TheJumboCenter.vue';
@@ -23,7 +23,7 @@ import TheFooter from './components/TheFooter.vue';
 export default {
   name: 'App',
   components: {
-    TheHeader,
+    TheNavBar,
     TheJumboTop,
     TheCenterMain,
     TheJumboCenter,
