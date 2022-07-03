@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&display=swap');
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import './variables.scss';
 
 
 /* Reset */
@@ -26,8 +27,27 @@ li {
 a {
     text-decoration: none;
     display: block;
+    // color: $ColorLight;
 }
 
 img {
     width: 100%;
+}
+
+.circle {
+    background-color: $ColorLight;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.fa-play {
+    color: $ColorSecondary;
+    position: absolute;
+}
+
+.img-svg {
+    width: 3.125rem;
 }

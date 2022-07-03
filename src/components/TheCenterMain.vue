@@ -33,51 +33,49 @@
                 <h5>Feautered playlist</h5>
                 <h6>View all videos ></h6>
             </div>
-            <div class="row">
-                <div class="col">
-                    <div class="box-video">
-                        <div class="box-img">
-                            <img src="/img/video2-2x.jpg" alt="">
-                            <div class="circle">
-                                <i class="fa-solid fa-play"></i>
-                            </div>
-                        </div>
-                        <div class="text-video">
-                            <h5>Thighs & glute workout</h5>
-                            <small>Increase your mobility</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="box-video">
-                        <div class="box-img">
-                            <img src="/img/video2-2x.jpg" alt="">
-                        </div>
-                        <div class="text-video">
-                            <h5>Thighs & glute workout</h5>
-                            <small>Increase your mobility</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="box-video">
-                        <div class="box-img">
-                            <img src="/img/video2-2x.jpg" alt="">
-                        </div>
-                        <div class="text-video">
-                            <h5>Thighs & glute workout</h5>
-                            <small>Increase your mobility</small>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-box-video">
+                <TheBoxCenterMain 
+                    v-for="(video, i) in videos" :key="i" :videos="video" 
+                    :src="video.src"
+                    :title="video.title"
+                    :subTitle="video.subtitle">    <!-- mi manca il subitlle non si stampa -->
+                </TheBoxCenterMain>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import TheBoxCenterMain from './TheBoxCenterMain.vue';
+
 export default {
+
     name: 'TheCenterMain',
+    components: {
+        TheBoxCenterMain
+    },
+
+    data() {
+        return {
+            videos: [
+                {
+                    src: "/img/video2-2x.jpg",
+                    title: "Thighs & glute workout",
+                    subTitle: "Increase your mobility"
+                },
+                {
+                    src: "/img/video7-2x.jpg",
+                    title: "Lift ì, firm & perck up",
+                    subTitle: "Feel young again"
+                },
+                {
+                    src: "/img/video9-2x.jpg",
+                    title: "Slim & trim your waist",
+                    subTitle: "Shed those pounds"
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -99,18 +97,10 @@ export default {
             overflow: hidden;
     
             .circle {
-                background-color: $ColorLight;
                 height: 80px;
                 width: 80px;
-                border-radius: 50%;
                 position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-
                 .fa-play {
-                    color: $ColorSecondary;
-                    position: absolute;
                     left: 2.0625rem;
                     bottom: 1.9375rem;
                     font-size: 1.25rem;
@@ -193,48 +183,9 @@ export default {
             }
         }
 
-        .row {
-            gap: 30px;
-
-            .box-img {
-                border-bottom-right-radius: 2.1875rem;
-                overflow: hidden;
-                position: relative;
-
-                .circle {
-                    background-color: $ColorLight;
-                    height: 50px;
-                    width: 50px;
-                    border-radius: 50%;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-
-                    .fa-play {
-                        color: $ColorSecondary;
-                        position: absolute;
-                        font-size: .9375rem;
-                        left: 1.25rem;
-                        bottom: 1.25rem;
-                    }
-                }
-
-            }
-            .text-video {
-                text-align: center;
-                padding-top: .9375rem;
-
-                h5 {
-                    font-size: 1rem;
-                    font-weight: 400;
-                    padding-bottom: .3125rem;
-                }
-
-                small {
-                    color: $ColorSecondary;
-                }
-            }
+        .col-box-video {
+            display: flex;
+            gap: 20px;
         }
     }
 }

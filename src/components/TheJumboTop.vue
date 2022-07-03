@@ -7,7 +7,7 @@
                         <div class="certified">
                             <h5>Certified fitness professional</h5>
                             <h1>Tke Control of your health</h1>
-                            <!-- <i class="fa-solid fa-grip-lines"></i> ci va messo una linea -->
+                            <img class="img-svg" src="/img/sep.svg" alt="">
                             <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet.</p>
                             <div class="buttons">
                                 <button class="btn btn-secondary">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="square-jumbo">
                     <div class="demos square">
-                        <i class="fa-solid fa-file"></i>
+                        <i class="fa-brands fa-atlassian"></i>
                         <div class="text">Demos</div>
                     </div>
                     <div class="sale square">
@@ -39,35 +39,13 @@
         </div>
         <div class="bg-color">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="cards">
-                            <img src="/img/service6-2x.jpg" alt="">
-                            <div class="title-cards">
-                                <!-- mettere linea -->
-                                <p>Crossfit Workout</p>
-                                <p>Push your limits</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="cards">
-                            <img src="/img/box1-2x.jpg" alt="">
-                            <div class="title-cards">
-                                <!-- mettere linea -->
-                                <p>Crossfit Workout</p>
-                                <p>Push your limits</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="cards">
-                            <img src="/img/box3-2x.jpg" alt="">
-                            <div class="title-cards">
-                                <!-- mettere linea -->
-                                <p>Crossfit Workout</p>
-                                <p>Push your limits</p>
-                            </div>
+                <div class="col-cards">
+                    <div class="cards" v-for="(card, i) in cards" :key="i">
+                        <img :src="card.src" alt="">
+                        <div class="title-cards">
+                            <img class="img-svg" src="/img/sep-white.svg" alt="">
+                            <p>{{card.title}}</p>
+                            <p>{{card.subTitle}}</p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +53,7 @@
                     <div class="testimonial">
                         <p>"how yuo respond to che chellange in the second half will determine what yuo become after the game, whether yuo ara a winner or a loser."</p>
                     </div>
-                    <!-- linea -->
+                    <img class="img-svg" src="/img/sep.svg" alt="">
                     <div class="user-testimonial">
                         <div class="col">
                             <div class="image">
@@ -92,8 +70,32 @@
 </template>
 
 <script>
+
+
 export default {
     name: 'TheJumboTop',
+
+    data() {
+        return {
+            cards: [
+                {
+                    src: "/img/service6-2x.jpg",
+                    title: "Crossfit wotkout",
+                    subTitle: "Push your limits"
+                },
+                {
+                    src: "/img/box1-2x.jpg",
+                    title: "New gym apparel",
+                    subTitle: "Look good, feel goog"
+                },
+                {
+                    src: "/img/box3-2x.jpg",
+                    title: "Team training",
+                    subTitle: "Find a partner"
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -101,8 +103,8 @@ export default {
 @import '../assets/style/variables.scss';
 @import '../assets/style/buttons.scss';
 .bg-jumbo {
-
-    background-image: url("/public/img/slider82x-scaled.jpg");
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url("/public/img/slider82x-scaled.jpg");
+    // background-image: url("/public/img/slider82x-scaled.jpg");
     height: 625px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -119,7 +121,6 @@ export default {
         .col {
             .certified {
                 
-
                 h5 {
                     color: $ColorTerzary;
                     font-weight: 500;
@@ -133,6 +134,7 @@ export default {
 
                 p {
                     color: $ColorText;
+                    padding-top: .9375rem;
                 }
             }
 
@@ -213,17 +215,21 @@ export default {
     background: linear-gradient(139deg, rgba(47,18,184,1) 0%, rgba(126,9,100,1) 48%, rgba(197,1,25,1) 84%); 
     padding-bottom: 7.75rem;
 
-    .row {
+    .col-cards {
         display: flex;
         justify-content: center;
         gap: 2.1875rem;
 
         .cards {
+            background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
             border-bottom-right-radius: 2.1875rem;
             overflow: hidden;
             position: relative;
             bottom: 3.125rem;
-            height: 380px;
+
+            img {
+                height: 100%;
+            }
 
             .title-cards {
                 position: absolute;
@@ -234,6 +240,7 @@ export default {
                 p {
                     font-weight: 700;
                     font-size: 1.50rem;
+                    padding-top: .375rem;
                 }
 
                 p:last-child {
@@ -267,7 +274,6 @@ export default {
                     border-radius: 50%;
                 }
             }
-
 
             span:last-child {
                 color: $ColorText;
