@@ -103,7 +103,7 @@ export default {
 @import '../assets/style/variables.scss';
 @import '../assets/style/buttons.scss';
 .jumbo-top {
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url("/public/img/slider82x-scaled.jpg");
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/public/img/slider82x-scaled.jpg);
     // background-image: url("/public/img/slider82x-scaled.jpg");
     height: 625px;
     background-position: top center;
