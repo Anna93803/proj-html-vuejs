@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-jumbo">
+        <div class="jumbo-top">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-color">
+        <div class="bg-jumbo-top">
             <div class="container">
                 <div class="col-cards">
                     <div class="cards" v-for="(card, i) in cards" :key="i">
@@ -102,7 +102,7 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/style/variables.scss';
 @import '../assets/style/buttons.scss';
-.bg-jumbo {
+.jumbo-top {
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url("/public/img/slider82x-scaled.jpg");
     // background-image: url("/public/img/slider82x-scaled.jpg");
     height: 625px;
@@ -211,7 +211,7 @@ export default {
     }
 }
 
-.bg-color {
+.bg-jumbo-top {
     background: linear-gradient(139deg, rgba(47,18,184,1) 0%, rgba(126,9,100,1) 48%, rgba(197,1,25,1) 84%); 
     padding-bottom: 7.75rem;
 
