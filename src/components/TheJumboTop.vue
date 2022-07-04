@@ -7,7 +7,7 @@
                         <div class="certified">
                             <h5>Certified fitness professional</h5>
                             <h1>Tke Control of your health</h1>
-                            <img class="img-svg" src="/img/sep.svg" alt="">
+                            <img class="img-svg" src="/img/sep.svg" alt="linea">
                             <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet.</p>
                             <div class="buttons">
                                 <button class="btn btn-secondary">
@@ -41,9 +41,9 @@
             <div class="container">
                 <div class="col-cards">
                     <div class="cards overlay" v-for="(card, i) in cards" :key="i">
-                        <img :src="card.src" alt="">
+                        <img :src="card.src" :alt="card.title">
                         <div class="title-cards">
-                            <img class="img-svg" src="/img/sep-white.svg" alt="">
+                            <img class="img-svg" src="/img/sep-white.svg" alt="linea">
                             <p>{{card.title}}</p>
                             <p>{{card.subTitle}}</p>
                         </div>
@@ -53,11 +53,11 @@
                     <div class="testimonial">
                         <p>"how yuo respond to che chellange in the second half will determine what yuo become after the game, whether yuo ara a winner or a loser."</p>
                     </div>
-                    <img class="img-svg" src="/img/sep.svg" alt="">
+                    <img class="img-svg" src="/img/sep.svg" alt="linea">
                     <div class="user-testimonial">
                         <div class="col">
                             <div class="image">
-                                <img src="/img/avatar-1-2x.jpg" alt="">
+                                <img src="/img/avatar-1-2x.jpg" alt="profile">
                             </div>
                         </div>
                         <span class="name">Brand Johnson</span>
@@ -70,8 +70,6 @@
 </template>
 
 <script>
-
-
 export default {
     name: 'TheJumboTop',
 
@@ -153,8 +151,8 @@ export default {
             .col {
                 .circle {
                     background-color: $ColorLight;
-                    height: 80px;
-                    width: 80px;
+                    height: 5rem;
+                    width: 5rem;
                     border-radius: 50%;
                     position: relative;
 
@@ -195,16 +193,15 @@ export default {
 
                     span {
                         position: absolute;
-                        top: 3px;
-                        left: 10px;
+                        top: .1875rem;
+                        left: .625rem;
                         font-size: .75rem;
                     }
                     
                 }
             }
-
             .text {
-                font-size: 13px;
+                font-size: .8125rem;
             }
             
         }
@@ -286,7 +283,7 @@ export default {
                 gap: .9375rem;
 
                 .image {
-                    width: 50px;
+                    width: 3.125rem;
 
                     img {
                         border-radius: 50%;

@@ -39,8 +39,8 @@ export default {
 
     .circle {
         background-color: $ColorLight;
-        height: 50px;
-        width: 50px;
+        height: 3.125rem;
+        width: 3.125rem;
         position: absolute;
         .fa-play {
             font-size: .9375rem;

@@ -9,10 +9,13 @@
                 </div>
                 <div class="col">
                     <ul>
-                        <li v-for="(link, i) in navLinks" :key="i"><a :href=" link.href " :class="{'bg-link' : link.new === 'new'}">{{ link.name }} {{ link.new }}</a></li>
-                        <!-- <li>
-                            <a href="#" class="bg-link">new</a>
-                        </li> -->
+                        <li v-for="(link, i) in navLinks" :key="i">
+                            <a :href=" link.href " 
+                                :class="{'bg-link' : link.new === 'new'}">
+                                {{ link.name }} {{ link.new }}
+                            </a>
+                            
+                        </li>
                         <li><button class="btn btn-secondary">Shedule a Workout</button></li>
                         <li><i class="fa-solid fa-cart-shopping"></i></li>
                         <li><i class="fa-solid fa-magnifying-glass"></i></li>

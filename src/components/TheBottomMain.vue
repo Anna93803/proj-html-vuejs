@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col">
                         <h3>"I've failed over and over again in my life. And that is why I succeed."</h3>
-                        <img class="img-svg" src="/img/sep.svg" alt="">
+                        <img class="img-svg" src="/img/sep.svg" alt="linea">
                         <p>Arcu auctor gravida nisl, congue sit nisi tincidunt eget proin. In lacinia lacus donec sed massa in ipsum eros,tristique.Gravida suspendisse etiam in laculis</p>
                         <button class="btn btn-secondary"><a href="#">Buy Avada today <i class="fa-solid fa-angle-right"></i></a></button>
                     </div>
@@ -157,7 +157,7 @@ export default {
         gap: 2.8125rem;
 
         .box-article {
-            width: calc(100% / 3 - 45px);
+            width: calc(100% / 3 - 2.8125rem);
         }
         .overlay {
             position: relative;

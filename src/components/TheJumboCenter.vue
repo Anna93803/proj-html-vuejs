@@ -7,9 +7,9 @@
                         <div class="form-sale">
                             <h5>Join our mailing list today</h5>
                             <h2>Insider offerts & flash sales in your inbox every weel.</h2>
-                            <img class="img-svg" src="/img/sep.svg" alt="">
+                            <img class="img-svg" src="/img/sep.svg" alt="linea">
                             <div class="form">
-                                <input type="text" placeholder="Insert your email..*">
+                                <input type="email" placeholder="Insert your email..*">
                                 <button class="btn btn-secondary">Subscribe</button>
                                 <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet,consectetur adipiscing elit send portitor lectus.</p>
                             </div>
@@ -111,7 +111,6 @@ export default {
                 }
 
                 .form {
-                    
                     padding-top: 1.875rem;
 
                     input {
@@ -133,7 +132,7 @@ export default {
 
 .bg-jumbo-center {
     background-color: $ColorPrimary;
-    padding: 115px 0;
+    padding: 7.1875rem 0;
 
     .col-cards {
         display: flex;
@@ -176,7 +175,6 @@ export default {
                 .fa-angle-right {
                     font-size: .8125rem;
                     padding-left: .3125rem;
-
                 }
             }
 

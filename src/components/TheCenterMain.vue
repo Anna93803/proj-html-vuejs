@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <div class="img-service">
-                    <img src="/img/service15-2x.jpg" alt="img">
+                    <img src="/img/service15-2x.jpg" alt="img-girl">
                     <div class="circle">
                         <i class="fa-solid fa-play"></i>
                     </div>
@@ -14,7 +14,7 @@
                 <h3>The best health & fitness advice online</h3>
                 <div class="fusion">
                     <div class="img-fusion">
-                        <img src="/img/unnamed.jpg" alt="">
+                        <img src="/img/unnamed.jpg" alt="logo-fusion">
                     </div>
                     <div>
                         <small>ThemeFusion</small>
@@ -47,9 +47,6 @@
 
 <script>
 import TheBoxCenterMain from './TheBoxCenterMain.vue';
-import {state} from '../store';
-
-// import {allVideo} from '../store';
 
 export default {
 
@@ -60,39 +57,37 @@ export default {
 
     data() {
         return {
-            // videoAll: false,
-            // videos: [
-            //     {
-            //         src: "/img/video2-2x.jpg",
-            //         title: "Thighs & glute workout",
-            //         subTitle: "Increase your mobility"
-            //     },
-            //     {
-            //         src: "/img/video7-2x.jpg",
-            //         title: "Lift ì, firm & perck up",
-            //         subTitle: "Feel young again"
-            //     },
-            //     {
-            //         src: "/img/video9-2x.jpg",
-            //         title: "Slim & trim your waist",
-            //         subTitle: "Shed those pounds"
-            //     }
-            // ]
+            videoAll: false,
+            videos: [
+                {
+                    src: "/img/video2-2x.jpg",
+                    title: "Thighs & glute workout",
+                    subTitle: "Increase your mobility"
+                },
+                {
+                    src: "/img/video7-2x.jpg",
+                    title: "Lift ì, firm & perck up",
+                    subTitle: "Feel young again"
+                },
+                {
+                    src: "/img/video9-2x.jpg",
+                    title: "Slim & trim your waist",
+                    subTitle: "Shed those pounds"
+                }
+            ]
         }
     },
     methods: {
         addVideo() {
-            state.videoAll = !state.videoAll;
-            console.log("ciaooo")
+            this.videoAll = !this.videoAll;
         }
     },
     computed: {
         allVideo() {
-            return state.allVideo;
-            // if(this.videoAll) {
-            //     return [...this.videos,...this.videos];
-            // }
-            // return this.videos;
+            if(this.videoAll) {
+                return [...this.videos,...this.videos];
+            }
+            return this.videos;
         }
     }
 }
@@ -116,8 +111,8 @@ export default {
             overflow: hidden;
     
             .circle {
-                height: 80px;
-                width: 80px;
+                height: 5rem;
+                width: 5rem;
                 position: absolute;
                 .fa-play {
                     left: 2.0625rem;
@@ -146,11 +141,11 @@ export default {
     
             .fusion {
                 display: flex;
-                gap: 10px;
+                gap: .625rem;
                 align-items: center;
                 .img-fusion {
-                    width: 45px;
-                    height: 45px;
+                    width: 2.8125rem;
+                    height: 2.8125rem;
     
                     img {
                         width: 100%;
@@ -163,20 +158,20 @@ export default {
                     a {
                         color: $ColorLight;
                         background-color: $ColorTerzary;
-                        padding: 4px;
+                        padding: .25rem;
                     }
     
                     span {
-                        border: 1px solid $ColorText;
+                        border: .0625rem solid $ColorText;
                         text-align: center;
-                        font-size: 12px;
-                        padding: 4px;
+                        font-size: .75rem;
+                        padding: .25rem;
                     }
                 }
             }
     
             p {
-                padding: 25px 0;
+                padding: 1.5625rem 0;
                 color: $ColorText;
                 word-break: break-all;
                 width: 64%;

@@ -42,13 +42,15 @@ export default {
         right: 0;
         bottom: 0;
         left: 0;
-        // background: linear-gradient(360deg, #2b38bb, #73388e);
+        background: linear-gradient(91deg, rgb(6 25 218 / 50%), rgb(119 0 173 / 50%));
     }
     .row {
         text-align: center;
         padding-top: 10.3125rem;
 
         .col {
+            z-index: 10;
+            position: relative;
             .circle {
                 height: 5rem;
                 width: 5rem;
