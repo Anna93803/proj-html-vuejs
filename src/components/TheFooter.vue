@@ -147,6 +147,7 @@ export default {
         display: block;
         font-size: 1rem;
         color: $ColorText;
+        cursor: pointer;
 
         &:hover {
             color: $ColorLight;
@@ -177,6 +178,7 @@ export default {
             position: absolute;
             bottom: 0;
             right: 3.125rem;
+            cursor: pointer;
 
             i {
                 padding-top: .4375rem;

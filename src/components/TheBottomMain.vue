@@ -3,11 +3,13 @@
         <div class="container py">
             <div class="article">
                 <h5>Latest articles</h5>
-                <h6>Read all articles <i class="fa-solid fa-angle-right"></i></h6>
+                <h6 @click="addVideo">Read all articles <i class="fa-solid fa-angle-right"></i></h6>
             </div>
             <div class="col-article">
-                <div class="box-article" v-for="(article, i) in articles" :key="i">
-                    <img :src="article.src" :alt="article.alt">
+                <div class="box-article" v-for="(article, i) in allVideo" :key="i">
+                    <div class="overlay">
+                        <img :src="article.src" :alt="article.alt">
+                    </div>
                     <div class="text-article">
                         <h5>{{ article.title }}</h5>
                         <small>{{ article.paragraph }}</small>
@@ -46,10 +48,12 @@
 </template>
 
 <script>
+
 export default {
     name: 'TheBottomMain',
     data() {
         return {
+            videoAll: false,
             articles: [
                 {
                     src: "/img/blog4-2x-600x386.jpg",
@@ -101,6 +105,20 @@ export default {
                 },
             ]
         }
+    },
+    methods: {
+        addVideo() {
+            this.videoAll = !this.videoAll;
+            console.log("ciao")
+        }
+    },
+    computed: {
+        allVideo() {
+            if(this.videoAll) {
+                return [...this.articles,...this.articles];
+            }
+            return this.articles;
+        }
     }
 }
 </script>
@@ -125,6 +143,7 @@ export default {
         h6 {
             font-size: .75rem;
             font-weight: 600;
+            cursor: pointer;
 
             .fa-angle-right {
                 font-size: .625rem;
@@ -134,7 +153,27 @@ export default {
     }
     .col-article {
         display: flex;
+        flex-wrap: wrap;
         gap: 2.8125rem;
+
+        .box-article {
+            width: calc(100% / 3 - 45px);
+        }
+        .overlay {
+            position: relative;
+            transition: all 0.4s;
+
+            &:hover::after {
+                content: "";
+                background: linear-gradient(356deg, #ae84fa, #00000000);
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                cursor: pointer;
+            }
+        }
 
         .text-article {
             padding-top: .9375rem;

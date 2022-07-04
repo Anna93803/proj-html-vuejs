@@ -24,7 +24,7 @@ export default {
         src: String,
         title: String,
         subTitle: String
-    }
+    },
 }
 </script>
 

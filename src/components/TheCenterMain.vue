@@ -25,20 +25,20 @@
                     </div>
                 </div>
                 <p>Arcu eu facilisi ut quisque placerat nunc habitant.Magna semper mauris,venenatis, leo integer sit pellentesque.</p>
-                <button class="btn btn-red"><a href="#"><i class="fa-brands fa-youtube"></i> Visit my YuoTube channel</a></button>
+                <button class="btn btn-red"><i class="fa-brands fa-youtube"></i> Visit my YuoTube channel</button>
             </div>
         </div>
         <div class="container">
             <div class="playlist">
                 <h5>Feautered playlist</h5>
-                <h6>View all videos ></h6>
+                <h6 @click="addVideo">View all videos <i class="fa-solid fa-angle-right"></i></h6>
             </div>
             <div class="col-box-video">
                 <TheBoxCenterMain 
-                    v-for="(video, i) in videos" :key="i" :videos="video" 
+                    v-for="(video, i) in allVideo" :key="i" :videos="video" 
                     :src="video.src"
                     :title="video.title"
-                    :subTitle="video.subTitle">    <!-- mi manca il subitlle non si stampa -->
+                    :subTitle="video.subTitle"> 
                 </TheBoxCenterMain>
             </div>
         </div>
@@ -47,6 +47,9 @@
 
 <script>
 import TheBoxCenterMain from './TheBoxCenterMain.vue';
+import {state} from '../store';
+
+// import {allVideo} from '../store';
 
 export default {
 
@@ -57,23 +60,39 @@ export default {
 
     data() {
         return {
-            videos: [
-                {
-                    src: "/img/video2-2x.jpg",
-                    title: "Thighs & glute workout",
-                    subTitle: "Increase your mobility"
-                },
-                {
-                    src: "/img/video7-2x.jpg",
-                    title: "Lift ì, firm & perck up",
-                    subTitle: "Feel young again"
-                },
-                {
-                    src: "/img/video9-2x.jpg",
-                    title: "Slim & trim your waist",
-                    subTitle: "Shed those pounds"
-                }
-            ]
+            // videoAll: false,
+            // videos: [
+            //     {
+            //         src: "/img/video2-2x.jpg",
+            //         title: "Thighs & glute workout",
+            //         subTitle: "Increase your mobility"
+            //     },
+            //     {
+            //         src: "/img/video7-2x.jpg",
+            //         title: "Lift ì, firm & perck up",
+            //         subTitle: "Feel young again"
+            //     },
+            //     {
+            //         src: "/img/video9-2x.jpg",
+            //         title: "Slim & trim your waist",
+            //         subTitle: "Shed those pounds"
+            //     }
+            // ]
+        }
+    },
+    methods: {
+        addVideo() {
+            state.videoAll = !state.videoAll;
+            console.log("ciaooo")
+        }
+    },
+    computed: {
+        allVideo() {
+            return state.allVideo;
+            // if(this.videoAll) {
+            //     return [...this.videos,...this.videos];
+            // }
+            // return this.videos;
         }
     }
 }
@@ -181,11 +200,20 @@ export default {
                 padding-bottom: 1.875rem;
                 font-size: 1.25rem;
             }
+
+            h6 {
+                cursor: pointer;
+            }
         }
 
         .col-box-video {
             display: flex;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+
+            div {
+                width: calc(100% / 3 - 1.25rem);
+            }
         }
     }
 }

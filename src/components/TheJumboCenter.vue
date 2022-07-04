@@ -10,7 +10,7 @@
                             <img class="img-svg" src="/img/sep.svg" alt="">
                             <div class="form">
                                 <input type="text" placeholder="Insert your email..*">
-                                <button class="btn btn-secondary"><a href="#">Subscribe</a></button>
+                                <button class="btn btn-secondary">Subscribe</button>
                                 <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet,consectetur adipiscing elit send portitor lectus.</p>
                             </div>
                         </div>
@@ -77,12 +77,11 @@ export default {
 @import '../assets/style/buttons.scss';
 
 .jumbo-center {
-    background: linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.4), transparent), url(/public/img/banner1-2x.jpg);
+    background: linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.4), transparent), url("/public/img/banner1-2x.jpg");
     height: 39.0625rem;
     background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
-    color: $ColorLight;
 
     .row {
         display: flex;
@@ -146,6 +145,7 @@ export default {
             text-align: center;
             padding: 3.125rem .625rem;
             transition: 0.5s;
+            cursor: pointer;
             .card-svg {
                 width: 3.125rem;
             }
