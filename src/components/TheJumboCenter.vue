@@ -77,9 +77,9 @@ export default {
 @import '../assets/style/buttons.scss';
 
 .jumbo-center {
-    background-image: url("/public/img/banner1-2x.jpg");
+    background: linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.4), transparent), url(/public/img/banner1-2x.jpg);
     height: 39.0625rem;
-    background-position: top center;
+    background-position: top right;
     background-repeat: no-repeat;
     background-size: cover;
     color: $ColorLight;
@@ -145,6 +145,7 @@ export default {
             border: .125rem solid $ColorSecondary;
             text-align: center;
             padding: 3.125rem .625rem;
+            transition: 0.5s;
             .card-svg {
                 width: 3.125rem;
             }
@@ -177,6 +178,10 @@ export default {
                     padding-left: .3125rem;
 
                 }
+            }
+
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }

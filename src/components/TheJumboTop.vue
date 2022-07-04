@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="jumbo">
         <div class="jumbo-top">
             <div class="container">
                 <div class="row">
@@ -102,14 +102,18 @@ export default {
 <style lang="scss" scoped>
 @import '../assets/style/variables.scss';
 @import '../assets/style/buttons.scss';
+
+.jumbo {
+    padding-top: 5rem;
+}
 .jumbo-top {
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), url(/public/img/slider82x-scaled.jpg);
-    // background-image: url("/public/img/slider82x-scaled.jpg");
-    height: 625px;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
+    background: linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.2), transparent), url(/public/img/slider82x-scaled.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 625px;
+    background-position: top center right;
+
 
     .row {
         display: flex;
@@ -140,10 +144,6 @@ export default {
 
             .buttons {
                 padding-top: 1.875rem;
-
-                a {
-                    color: $ColorLight;
-                }
 
                 .btn-secondary {
                     margin-right: .9375rem;
@@ -226,6 +226,7 @@ export default {
             overflow: hidden;
             position: relative;
             bottom: 3.125rem;
+            transition: 0.5s;
 
             img {
                 height: 100%;
@@ -247,6 +248,10 @@ export default {
                     color: $ColorGold;
                     font-size: .9375rem;
                 }
+            }
+
+            &:hover {
+                transform: scale(1.1)
             }
         }
     }

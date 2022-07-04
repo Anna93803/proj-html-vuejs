@@ -25,7 +25,7 @@ export default {
 @import '../assets/style/variables.scss';
 
 .bg-jumbo {
-    background-image: url("/public/img/banner14-2x.jpg");
+    background: url("/public/img/banner14-2x.jpg");  //linear-gradient(( #2d39bf, #7b398f, rgba(0, 0, 0, 0.2), transparent) )
     height: 39.0625rem;
     background-position: top center;
     background-repeat: no-repeat;

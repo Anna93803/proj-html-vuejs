@@ -152,7 +152,7 @@ export default {
     }
 }
 .jumbo-bottom {
-    background-image: url("/public/img/banner2-2x.jpg");
+    background: linear-gradient(360deg, #060606, #060606, rgba(0, 0, 0, 0.2), transparent) , url("/public/img/banner2-2x.jpg");
     height: 39.0625rem;
     background-position: top center;
     background-repeat: no-repeat;

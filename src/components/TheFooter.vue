@@ -20,11 +20,10 @@
                 <div class="col">
                     <h4>Recent post</h4>
                     <ul>
-                        <li><i class="fa-solid fa-angle-right"></i>The best protein shake</li>
-                        <li><i class="fa-solid fa-angle-right"></i>Ultimate cardio workout</li>
-                        <li><i class="fa-solid fa-angle-right"></i>New juices available now</li>
-                        <li><i class="fa-solid fa-angle-right"></i>Tips to find training partners</li>
-                        <li><i class="fa-solid fa-angle-right"></i>20 best healthy recipes </li>
+                        <li v-for="(link, i) in linkPost" :key="i">
+                            <i class="fa-solid fa-angle-right"></i>
+                            {{ link.link }}
+                        </li>
                     </ul>
                 </div>
                 <div class="col">
@@ -49,6 +48,28 @@
 <script>
 export default {
     name: 'TheFooter',
+    data() {
+        return {
+            linkPost:[
+                {
+                    link: "The best protein shake",
+                },
+                {
+                    link: "Ultimate cardio workout"
+                },
+                {
+                    link: "New juices available now"
+                },
+                {
+                    link: "Tips to find training partners"
+                },
+                {
+                    link: "20 best healthy recipes"
+                }
+            ]
+            
+        }
+    }
 }
 </script>
 

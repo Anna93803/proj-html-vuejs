@@ -38,7 +38,7 @@
                     v-for="(video, i) in videos" :key="i" :videos="video" 
                     :src="video.src"
                     :title="video.title"
-                    :subTitle="video.subtitle">    <!-- mi manca il subitlle non si stampa -->
+                    :subTitle="video.subTitle">    <!-- mi manca il subitlle non si stampa -->
                 </TheBoxCenterMain>
             </div>
         </div>

@@ -4,15 +4,15 @@
             <div class="row">
                 <div class="col">
                     <div class="logo">
-                        <img src="/img/logo.png" alt="logo">
+                        <img src="/img/logo.png" alt="Avada Fitness Logo">
                     </div>
                 </div>
                 <div class="col">
                     <ul>
-                        <li v-for="(link, i) in navLinks" :key="i"><a :href=" link.href ">{{ link.name }}</a></li>
-                        <li>
+                        <li v-for="(link, i) in navLinks" :key="i"><a :href=" link.href " :class="{'bg-link' : link.new === 'new'}">{{ link.name }} {{ link.new }}</a></li>
+                        <!-- <li>
                             <a href="#" class="bg-link">new</a>
-                        </li>
+                        </li> -->
                         <li><button class="btn btn-secondary">Shedule a Workout</button></li>
                         <li><i class="fa-solid fa-cart-shopping"></i></li>
                         <li><i class="fa-solid fa-magnifying-glass"></i></li>
@@ -51,7 +51,8 @@ export default {
                 },
                 {
                     name: 'Store',
-                    href: '#'
+                    href: '#',
+                    new: 'new'
                 }
             ]
         }
@@ -66,6 +67,9 @@ export default {
 .bg-navbar {
     background-color: $ColorPrimary;
     padding: 1.25rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 
     .row {
         display: flex;
@@ -106,7 +110,6 @@ export default {
 
                     &:hover {
                         color: $ColorPrimary;
-                        font-weight: 700;
                     }
                 }
             }
