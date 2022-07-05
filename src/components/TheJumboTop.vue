@@ -252,7 +252,7 @@ export default {
                     color: $ColorLight;
                     bottom: 1.5625rem;
                     left: 1.25rem;
-                    z-index: 10;
+                    z-index: 8;
 
                     p {
                         font-weight: 700;
