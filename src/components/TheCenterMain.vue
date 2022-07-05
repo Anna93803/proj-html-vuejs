@@ -1,9 +1,9 @@
 <template>
     <div class="center-main">
-        <div class="row">
+        <div class="row" id="video">
             <div class="col">
                 <div class="img-service">
-                    <img src="/img/service15-2x.jpg" alt="img-girl">
+                    <img src="/img/service15-2x.jpg" alt="img-girl" >
                     <div class="circle">
                         <i class="fa-solid fa-play"></i>
                     </div>
@@ -11,7 +11,7 @@
             </div>
             <div class="col">
                 <h6>Tune up your workouts</h6>
-                <h3>The best health & fitness advice online</h3>
+                <h3>The best health & fitness <br> advice online</h3>
                 <div class="fusion">
                     <div class="img-fusion">
                         <img src="/img/unnamed.jpg" alt="logo-fusion">
@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <p>Arcu eu facilisi ut quisque placerat nunc habitant.Magna semper mauris,venenatis, leo integer sit pellentesque.</p>
-                <button class="btn btn-red"><i class="fa-brands fa-youtube"></i> Visit my YuoTube channel</button>
+                <button class="btn btn-red"><i class="fa-brands fa-youtube"></i> Visit my YouTube channel</button>
             </div>
         </div>
         <div class="container">
@@ -66,7 +66,7 @@ export default {
                 },
                 {
                     src: "/img/video7-2x.jpg",
-                    title: "Lift ì, firm & perck up",
+                    title: "Lift, firm & perck up",
                     subTitle: "Feel young again"
                 },
                 {
@@ -80,7 +80,7 @@ export default {
     methods: {
         addVideo() {
             this.videoAll = !this.videoAll;
-        }
+        },
     },
     computed: {
         allVideo() {
@@ -134,8 +134,6 @@ export default {
             h3 {
                 font-size: 3.1875rem;
                 padding: 1.5625rem 0;
-                word-break: break-all;
-                width: 64%;
                 font-weight: 400;
             }
     

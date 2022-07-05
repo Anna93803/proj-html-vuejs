@@ -49,7 +49,7 @@ export default {
         padding-top: 10.3125rem;
 
         .col {
-            z-index: 10;
+            z-index: 1;
             position: relative;
             .circle {
                 height: 5rem;

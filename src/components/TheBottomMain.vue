@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container py">
+        <div class="container py" id="blog">
             <div class="article">
                 <h5>Latest articles</h5>
                 <h6 @click="addVideo">Read all articles <i class="fa-solid fa-angle-right"></i></h6>
@@ -109,7 +109,6 @@ export default {
     methods: {
         addVideo() {
             this.videoAll = !this.videoAll;
-            console.log("ciao")
         }
     },
     computed: {

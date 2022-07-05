@@ -10,11 +10,9 @@
                 <div class="col">
                     <ul>
                         <li v-for="(link, i) in navLinks" :key="i">
-                            <a :href=" link.href " 
-                                :class="{'bg-link' : link.new === 'new'}">
-                                {{ link.name }} {{ link.new }}
+                            <a :href=" link.href " :class="{'active' : link.name === 'Home', 'bg-link' : link.name === 'new'}">
+                                {{ link.name }}
                             </a>
-                            
                         </li>
                         <li><button class="btn btn-secondary">Shedule a Workout</button></li>
                         <li><i class="fa-solid fa-cart-shopping"></i></li>
@@ -38,7 +36,7 @@ export default {
                 },
                 {
                     name: 'Services',
-                    href: '#'
+                    href: '#services'
                 },
                 {
                     name: 'About',
@@ -46,16 +44,18 @@ export default {
                 },
                 {
                     name: 'Videos',
-                    href: '#',
+                    href: '#video',
                 },
                 {
                     name: 'Blog',
-                    href: '#'
+                    href: '#blog'
                 },
                 {
                     name: 'Store',
                     href: '#',
-                    new: 'new'
+                },
+                {
+                    name : 'new'
                 }
             ]
         }
@@ -104,17 +104,27 @@ export default {
                 li:last-child {
                     padding-right: 0;
                 }
+
+                li:nth-child(6) {
+                    padding-right: .4375rem;
+                }
+
+                .active {
+                    color: white;
+                }
                 .bg-link {
                     background-color: $ColorGold;
                     color: $ColorPrimary;
                     padding: .125rem .25rem;
                     border-radius: .125rem;
                     font-size: .8125rem;
+                    cursor: pointer;
 
                     &:hover {
                         color: $ColorPrimary;
                     }
                 }
+                
             }
         }
     }

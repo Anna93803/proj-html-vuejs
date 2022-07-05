@@ -1,17 +1,17 @@
 <template>
     <div class="jumbo">
-        <div class="jumbo-top">
+        <div class="jumbo-top" id="change" >
             <div class="container">
                 <div class="row">
                     <div class="col">
                         <div class="certified">
                             <h5>Certified fitness professional</h5>
-                            <h1>Tke Control of your health</h1>
+                            <h1>Take Control of your health</h1>
                             <img class="img-svg" src="/img/sep.svg" alt="linea">
                             <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus dolor sit amet.</p>
                             <div class="buttons">
                                 <button class="btn btn-secondary">
-                                    <i class="fa-brands fa-youtube"></i> Visit my YuoTube channel
+                                    <i class="fa-brands fa-youtube"></i> Visit my YouTube channel
                                 </button>
                                 <button class="btn btn-dark">
                                     Buy Avada Today <i class="fa-solid fa-arrow-right"></i>
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="circle">
+                        <div class="circle" @click="change()">
                             <i class="fa-solid fa-play"></i>
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="row-testimonial">
                     <div class="testimonial">
-                        <p>"how yuo respond to che chellange in the second half will determine what yuo become after the game, whether yuo ara a winner or a loser."</p>
+                        <p>"How you respond to che chellange in the second <br>half will determine what yuo become after the game, whether you are a winner or a loser."</p>
                     </div>
                     <img class="img-svg" src="/img/sep.svg" alt="linea">
                     <div class="user-testimonial">
@@ -78,13 +78,13 @@ export default {
             cards: [
                 {
                     src: "/img/service6-2x.jpg",
-                    title: "Crossfit wotkout",
+                    title: "Crossfit workout",
                     subTitle: "Push your limits"
                 },
                 {
                     src: "/img/box1-2x.jpg",
                     title: "New gym apparel",
-                    subTitle: "Look good, feel goog"
+                    subTitle: "Look good, feel good"
                 },
                 {
                     src: "/img/box3-2x.jpg",
@@ -92,6 +92,12 @@ export default {
                     subTitle: "Find a partner"
                 }
             ]
+        }
+    },
+    methods: {
+        change() {
+            const img = document.getElementById('change');
+            img.classList.toggle('change-img');
         }
     }
 }
@@ -102,13 +108,13 @@ export default {
 @import '../assets/style/buttons.scss';
 
 .jumbo {
-    padding-top: 5rem;
+    padding-top: 4rem;
     .jumbo-top {
         position: relative;
         background: linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.2), transparent), url("/public/img/slider82x-scaled.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        height: 625px;
+        height: 39.0625rem;
         background-position: top center right;
 
 
@@ -273,7 +279,6 @@ export default {
             .testimonial {
                 text-align: center;
                 font-size: 2.5rem;
-                word-break: break-all;
                 width: 68%;
                 padding: 3.125rem 0;
             }
@@ -297,6 +302,12 @@ export default {
             }
         }
 
+    }
+
+    .change-img {
+        background:linear-gradient(90deg, #060606, #060606, rgba(0, 0, 0, 0.2), transparent), url('/public/img/66-664544_sports-fitness-images-hd.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 

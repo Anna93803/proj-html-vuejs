@@ -1,12 +1,20 @@
 <template>
   <div id="app">
-    <TheNavBar/>
-    <TheJumboTop/>
-    <TheCenterMain/>
-    <TheJumboCenter/>
-    <TheBottomMain/>
-    <TheJumboBottom/>
-    <TheFooter/>
+    <header>
+      <nav>
+        <TheNavBar/>
+      </nav>
+    </header>
+    <main>
+      <TheJumboTop/>
+      <TheCenterMain/>
+      <TheJumboCenter/>
+      <TheBottomMain/>
+      <TheJumboBottom/>
+    </main>
+    <footer>
+      <TheFooter/>
+    </footer>
   </div>
 </template>
 
@@ -36,4 +44,5 @@ export default {
 
 <style lang="scss">
 @import './assets/style/main.scss';
+
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="jumbo-center">
+        <div class="jumbo-center" id="services">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -53,7 +53,7 @@ export default {
                 {
                     src: "/img/crossfit.svg",
                     alt: "Img Crossift",
-                    title: "Crossfit wotkout",
+                    title: "Crossfit workout",
                     subtitle: "Push your limits",
                     paragraph: "Vestibulum,curabitur eu sem nibh ultrices sit nulla adipiscing. Nisl sit fames amet senectus aget sed duis vehicula. Tristiqua.",
                     link: "Learn about Crossifit"
